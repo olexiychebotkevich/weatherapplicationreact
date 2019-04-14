@@ -3,9 +3,9 @@ import './App.css';
 import 'bulma/css/bulma.css';
 
 const PLACES=[
-  {name:'New-Yourk',zip:'10001'},
-  {name:'Washington',zip:'20001'},
-  {name:'Los Angeles',zip:'90023'},
+  {name:'Tizi Ouzou',zip:'10001'},
+  {name:'Saida',zip:'20006'},
+  {name:'Los Angeles',zip:'90004'},
   {name:'Seattle',zip:'98101'}
 ]
 class WeatherService extends Component{
@@ -30,15 +30,15 @@ render(){
   // <div>JSON.stringify(weatherData)</div>
   <div>
     <h1>
-      {weather.main} in {weatherData.name}
+      <strong>{weather.main} in {weatherData.name}</strong>
       <img src={iconURL} alt={weather.description}/>
     </h1>
-    <p>Current temp {((weatherData.main.temp-32)/1.8).toFixed(1)}</p>
-    <p>Min temp {((weatherData.main.temp_min-32)/1.8).toFixed(1)}</p>
-    <p>Max temp {((weatherData.main.temp_max-32)/1.8).toFixed(1)}</p>
-    <p>Pressure {weatherData.main.pressure}mb</p>
-    <p>Wind speed {weatherData.wind.speed}m/sec</p>
-    <p>Humidity {weatherData.main.humidity}m/sec</p>
+    <p>Current temp: {((weatherData.main.temp-32)/1.8).toFixed(1)}</p>
+    <p>Min temp: {((weatherData.main.temp_min-32)/1.8).toFixed(1)}</p>
+    <p>Max temp: {((weatherData.main.temp_max-32)/1.8).toFixed(1)}</p>
+    <p>Pressure: {weatherData.main.pressure}mb</p>
+    <p>Wind speed: {weatherData.wind.speed}m/sec</p>
+    <p>Humidity: {weatherData.main.humidity}m/sec</p>
   </div>
   );
 
